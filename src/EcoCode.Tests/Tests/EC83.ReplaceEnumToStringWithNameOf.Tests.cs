@@ -37,7 +37,7 @@ public sealed class ReplaceEnumToStringWithNameOfTests
         }
         """).ConfigureAwait(false);
 
-    [TestMethod]
+    [TestMethod ]
     public async Task EnumToStringShouldBeNameOfAsync2() => await VerifyAsync("""
         using System;
         public static class Program
