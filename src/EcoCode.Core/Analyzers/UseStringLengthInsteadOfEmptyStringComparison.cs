@@ -9,13 +9,13 @@ namespace EcoCode.Analyzers
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public sealed class UseStringLengthInsteadOfEmptyStringComparison : DiagnosticAnalyzer
     {
-        private static readonly string DiagnosticId = "RCS1156";
-        private static readonly LocalizableString Title = "Use string.Length instead of comparison with empty string";
-        private static readonly LocalizableString MessageFormat = "Replace string comparison with empty string with 'Length' check";
-        private static readonly LocalizableString Description = "Use 's?.Length == 0' instead of 's == \"\"' for performance and null safety.";
-        private const string Category = "Style";
+        public static readonly string DiagnosticId = "RCS1156";
+        public static readonly LocalizableString Title = "Use string.Length instead of comparison with empty string";
+        public static readonly LocalizableString MessageFormat = "Replace string comparison with empty string with 'Length' check";
+        public static readonly LocalizableString Description = "Use 's?.Length == 0' instead of 's == \"\"' for performance and null safety.";
+        public const string Category = "Style";
 
-        private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(
+        public static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(
             DiagnosticId,
             Title,
             MessageFormat,
